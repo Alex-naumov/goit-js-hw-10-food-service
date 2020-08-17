@@ -13,15 +13,13 @@ const Theme = {
 
 const handleChangeTheme = () => {
   if (refs.checkBox.checked) {
+    refs.body.classList.remove(Theme.LIGHT);
     refs.body.classList.add(Theme.DARK);
-
-    save();
   } else {
     refs.body.classList.remove(Theme.DARK);
     refs.body.classList.add(Theme.LIGHT);
-
-    save();
   }
+  save();
 };
 
 const save = () => {
